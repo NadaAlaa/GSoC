@@ -144,7 +144,7 @@ namespace Phonebook
             while (SR.Peek() != -1)
             {
                 Record = SR.ReadLine();
-                if (Record[0] != '*')
+                if (Record.Length > 0 && Record[0] != '*')
                 {
                     string[] Tokens = Record.Split('*');
                     if (Tokens[0] == ID)
@@ -260,7 +260,7 @@ namespace Phonebook
                 while (SR.Peek() != -1)
                 {
                     Record = SR.ReadLine();
-                    if (Record[0] == '*')
+                    if (Record.Length > 0 && Record[0] == '*')
                     {
                         contact = new Contact(ID, ContactType[0] + PhoneNumber);
                         Record = contact.ID + contact.PhoneNumber;
@@ -339,7 +339,7 @@ namespace Phonebook
             while (SR.Peek() != -1)
             {
                 Record = SR.ReadLine();
-                if (Record[0] != '*')
+                if (Record.Length > 0 && Record[0] != '*')
                 {
                     string[] Tokens = Record.Split('*');
                     contact = new Contact();
@@ -360,6 +360,7 @@ namespace Phonebook
                             if (!contact.FoundWorkNumber())
                             {
                                 person.DisplayData();
+                                SR.Close();
                                 return true;
                             }
                         }
