@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,30 +11,33 @@ namespace Phonebook
         public string ID;
         public string PhoneNumber;
 
-        public Contact() 
-        {}
+        public Contact()
+        { }
 
-       public Contact(string id, string phoneNumber = "0000000000")
+        public Contact(string id, string phoneNumber = "0000000000")
         {
-            this.ID = id;
+            this.ID = id + '*';
             this.PhoneNumber = phoneNumber;
         }
 
-
-        public bool AddContact(char ContactType, string PhoneNumber)
+        public bool CanAddContact(string ContactType, string PhoneNumber)
         {
-            if(ContactType == 'M' && PhoneNumber.Length!=12){
-                return false;
-            }
-
-            if (ContactType != 'M' && PhoneNumber.Length != 10)
+            if (ContactType == "Mobile" && PhoneNumber.Length != 12)
             {
                 return false;
             }
 
-            this.PhoneNumber += ContactType + PhoneNumber;
+            if (ContactType != "Mobile" && PhoneNumber.Length != 10)
+            {
+                return false;
+            }
 
             return true;
+        }
+
+        public void AddNumber(string PhoneNumber, string ContactType)
+        {
+            this.PhoneNumber += ContactType[0] + PhoneNumber;
         }
 
         public bool DisplayHomeNumbers()
@@ -46,8 +49,8 @@ namespace Phonebook
                 {
                     /*
                      * Output: ID this.PhoneNumber.substr(i+1,10);
-                     * 
-                     * */
+                     *
+                     */
                     FoundHomeNumber = true;
                 }
             }
