@@ -89,7 +89,7 @@ namespace Phonebook
 
         public static bool DeletePerson(string ID)
         {
-            FileStream FS = new FileStream("Person.txt", FileMode.Open, FileAccess.ReadWrite);
+            FileStream FS = new FileStream("Person.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
             if (FS.Length <= 0)
             {
                 FS.Close();
@@ -134,7 +134,7 @@ namespace Phonebook
 
         public static bool DeleteContact(string ID)
         {
-            FileStream FS = new FileStream("Contact.txt", FileMode.Open, FileAccess.ReadWrite);
+            FileStream FS = new FileStream("Contact.txt", FileMode.OpenOrCreate, FileAccess.ReadWrite);
             StreamReader SR = new StreamReader(FS);
             StreamWriter SW;
             string[] FileRecords = new string[MAX];
@@ -287,7 +287,7 @@ namespace Phonebook
 
         public static bool FindNumbersOfAllContacts(string Type)
         {
-            FileStream FS = new FileStream("Person.txt", FileMode.Open);
+            FileStream FS = new FileStream("Person.txt", FileMode.OpenOrCreate);
             if (FS.Length <= 0)
             {
                 FS.Close();
@@ -333,7 +333,7 @@ namespace Phonebook
 
         public static bool FindNumber(string ID, string Name, string Type)
         {
-            FileStream FSS = new FileStream("Contact.txt", FileMode.Open);
+            FileStream FSS = new FileStream("Contact.txt", FileMode.OpenOrCreate);
             StreamReader SR = new StreamReader(FSS);
 
             while (SR.Peek() != -1)
