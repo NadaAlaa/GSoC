@@ -302,6 +302,24 @@ namespace Phonebook
             string Name = AddNewPersonName_TextBox.Text;
             string Address = AddNewPersonAddress_TextBox.Text;
 
+            if (ID.Length == 0)
+            {
+                MessageBox.Show("Please Enter a Valid ID!");
+                return;
+            }
+
+            if (Name.Length == 0)
+            {
+                MessageBox.Show("Please Enter a Valid Name!");
+                return;
+            }
+
+            if (Address.Length == 0)
+            {
+                MessageBox.Show("Please Enter a Valid Address!");
+                return;
+            }
+
             AddPerson(ID, Name, Address);
         }
 
@@ -310,6 +328,18 @@ namespace Phonebook
             string ID = AddNewContactID_TextBox.Text;
             string Number = AddNewContact_TextBox.Text;
             string ContactType = PhoneType_ComboBox.Text;
+
+            if (ID.Length == 0)
+            {
+                MessageBox.Show("Please Enter a Valid ID!");
+                return;
+            }
+
+            if (ContactType.Length == 0)
+            {
+                MessageBox.Show("Please Choose a Valid Contact Type!");
+                return;
+            }
 
             AddContact(ID, Number, ContactType);
         }
@@ -320,6 +350,11 @@ namespace Phonebook
             {
                 MessageBox.Show("Person Deleted!");
             }
+        }
+
+        private void DeleteContact_Label_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
