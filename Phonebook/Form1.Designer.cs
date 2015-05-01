@@ -46,15 +46,18 @@ namespace Phonebook
             this.AddNewContact_Button = new System.Windows.Forms.Button();
             this.AddNewContact_TextBox = new System.Windows.Forms.TextBox();
             this.PhoneType_ComboBox = new System.Windows.Forms.ComboBox();
+            this.DisplayHomeNumbers = new System.Windows.Forms.Button();
+            ListView = new System.Windows.Forms.ListView();
+            this.ContactsMissingWorkNumbers = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // AddNewPerson_Label
             // 
             this.AddNewPerson_Label.AutoSize = true;
-            this.AddNewPerson_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddNewPerson_Label.Font = new System.Drawing.Font("Quartz MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddNewPerson_Label.Location = new System.Drawing.Point(11, 9);
             this.AddNewPerson_Label.Name = "AddNewPerson_Label";
-            this.AddNewPerson_Label.Size = new System.Drawing.Size(141, 20);
+            this.AddNewPerson_Label.Size = new System.Drawing.Size(155, 19);
             this.AddNewPerson_Label.TabIndex = 0;
             this.AddNewPerson_Label.Text = "Add New Person";
             this.AddNewPerson_Label.UseMnemonic = false;
@@ -62,22 +65,21 @@ namespace Phonebook
             // DeleteContact_Label
             // 
             this.DeleteContact_Label.AutoSize = true;
-            this.DeleteContact_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteContact_Label.Font = new System.Drawing.Font("Quartz MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteContact_Label.Location = new System.Drawing.Point(14, 238);
             this.DeleteContact_Label.Name = "DeleteContact_Label";
-            this.DeleteContact_Label.Size = new System.Drawing.Size(123, 20);
+            this.DeleteContact_Label.Size = new System.Drawing.Size(142, 19);
             this.DeleteContact_Label.TabIndex = 1;
             this.DeleteContact_Label.Text = "Delete Person";
             this.DeleteContact_Label.UseMnemonic = false;
-            this.DeleteContact_Label.Click += new System.EventHandler(this.DeleteContact_Label_Click);
             // 
             // AddNewContact_Label
             // 
             this.AddNewContact_Label.AutoSize = true;
-            this.AddNewContact_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddNewContact_Label.Font = new System.Drawing.Font("Quartz MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddNewContact_Label.Location = new System.Drawing.Point(12, 138);
             this.AddNewContact_Label.Name = "AddNewContact_Label";
-            this.AddNewContact_Label.Size = new System.Drawing.Size(148, 20);
+            this.AddNewContact_Label.Size = new System.Drawing.Size(167, 19);
             this.AddNewContact_Label.TabIndex = 2;
             this.AddNewContact_Label.Text = "Add New Contact";
             this.AddNewContact_Label.UseMnemonic = false;
@@ -85,10 +87,10 @@ namespace Phonebook
             // AddNewPersonAddress_Label
             // 
             this.AddNewPersonAddress_Label.AutoSize = true;
-            this.AddNewPersonAddress_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddNewPersonAddress_Label.Font = new System.Drawing.Font("Quartz MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddNewPersonAddress_Label.Location = new System.Drawing.Point(14, 97);
             this.AddNewPersonAddress_Label.Name = "AddNewPersonAddress_Label";
-            this.AddNewPersonAddress_Label.Size = new System.Drawing.Size(75, 20);
+            this.AddNewPersonAddress_Label.Size = new System.Drawing.Size(85, 19);
             this.AddNewPersonAddress_Label.TabIndex = 3;
             this.AddNewPersonAddress_Label.Text = "Address";
             this.AddNewPersonAddress_Label.UseMnemonic = false;
@@ -96,10 +98,10 @@ namespace Phonebook
             // AddNewPersonName_Label
             // 
             this.AddNewPersonName_Label.AutoSize = true;
-            this.AddNewPersonName_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddNewPersonName_Label.Font = new System.Drawing.Font("Quartz MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddNewPersonName_Label.Location = new System.Drawing.Point(14, 70);
             this.AddNewPersonName_Label.Name = "AddNewPersonName_Label";
-            this.AddNewPersonName_Label.Size = new System.Drawing.Size(55, 20);
+            this.AddNewPersonName_Label.Size = new System.Drawing.Size(58, 19);
             this.AddNewPersonName_Label.TabIndex = 4;
             this.AddNewPersonName_Label.Text = "Name";
             this.AddNewPersonName_Label.UseMnemonic = false;
@@ -107,10 +109,10 @@ namespace Phonebook
             // AddPersonID_Label
             // 
             this.AddPersonID_Label.AutoSize = true;
-            this.AddPersonID_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddPersonID_Label.Font = new System.Drawing.Font("Quartz MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddPersonID_Label.Location = new System.Drawing.Point(14, 43);
             this.AddPersonID_Label.Name = "AddPersonID_Label";
-            this.AddPersonID_Label.Size = new System.Drawing.Size(28, 20);
+            this.AddPersonID_Label.Size = new System.Drawing.Size(25, 19);
             this.AddPersonID_Label.TabIndex = 5;
             this.AddPersonID_Label.Text = "ID";
             this.AddPersonID_Label.UseMnemonic = false;
@@ -118,10 +120,10 @@ namespace Phonebook
             // AddNewContactID_Label
             // 
             this.AddNewContactID_Label.AutoSize = true;
-            this.AddNewContactID_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddNewContactID_Label.Font = new System.Drawing.Font("Quartz MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddNewContactID_Label.Location = new System.Drawing.Point(14, 170);
             this.AddNewContactID_Label.Name = "AddNewContactID_Label";
-            this.AddNewContactID_Label.Size = new System.Drawing.Size(28, 20);
+            this.AddNewContactID_Label.Size = new System.Drawing.Size(25, 19);
             this.AddNewContactID_Label.TabIndex = 6;
             this.AddNewContactID_Label.Text = "ID";
             this.AddNewContactID_Label.UseMnemonic = false;
@@ -129,10 +131,10 @@ namespace Phonebook
             // DeleteContactID_Label
             // 
             this.DeleteContactID_Label.AutoSize = true;
-            this.DeleteContactID_Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteContactID_Label.Font = new System.Drawing.Font("Quartz MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteContactID_Label.Location = new System.Drawing.Point(14, 279);
             this.DeleteContactID_Label.Name = "DeleteContactID_Label";
-            this.DeleteContactID_Label.Size = new System.Drawing.Size(28, 20);
+            this.DeleteContactID_Label.Size = new System.Drawing.Size(25, 19);
             this.DeleteContactID_Label.TabIndex = 7;
             this.DeleteContactID_Label.Text = "ID";
             this.DeleteContactID_Label.UseMnemonic = false;
@@ -141,35 +143,35 @@ namespace Phonebook
             // 
             this.AddNewPersonID_TextBox.Location = new System.Drawing.Point(162, 43);
             this.AddNewPersonID_TextBox.Name = "AddNewPersonID_TextBox";
-            this.AddNewPersonID_TextBox.Size = new System.Drawing.Size(320, 20);
+            this.AddNewPersonID_TextBox.Size = new System.Drawing.Size(320, 21);
             this.AddNewPersonID_TextBox.TabIndex = 8;
             // 
             // DeleteContactID_TextBox
             // 
             this.DeleteContactID_TextBox.Location = new System.Drawing.Point(162, 279);
             this.DeleteContactID_TextBox.Name = "DeleteContactID_TextBox";
-            this.DeleteContactID_TextBox.Size = new System.Drawing.Size(320, 20);
+            this.DeleteContactID_TextBox.Size = new System.Drawing.Size(320, 21);
             this.DeleteContactID_TextBox.TabIndex = 9;
             // 
             // AddNewContactID_TextBox
             // 
             this.AddNewContactID_TextBox.Location = new System.Drawing.Point(162, 170);
             this.AddNewContactID_TextBox.Name = "AddNewContactID_TextBox";
-            this.AddNewContactID_TextBox.Size = new System.Drawing.Size(320, 20);
+            this.AddNewContactID_TextBox.Size = new System.Drawing.Size(320, 21);
             this.AddNewContactID_TextBox.TabIndex = 10;
             // 
             // AddNewPersonAddress_TextBox
             // 
             this.AddNewPersonAddress_TextBox.Location = new System.Drawing.Point(162, 97);
             this.AddNewPersonAddress_TextBox.Name = "AddNewPersonAddress_TextBox";
-            this.AddNewPersonAddress_TextBox.Size = new System.Drawing.Size(320, 20);
+            this.AddNewPersonAddress_TextBox.Size = new System.Drawing.Size(320, 21);
             this.AddNewPersonAddress_TextBox.TabIndex = 11;
             // 
             // AddNewPersonName_TextBox
             // 
             this.AddNewPersonName_TextBox.Location = new System.Drawing.Point(162, 70);
             this.AddNewPersonName_TextBox.Name = "AddNewPersonName_TextBox";
-            this.AddNewPersonName_TextBox.Size = new System.Drawing.Size(320, 20);
+            this.AddNewPersonName_TextBox.Size = new System.Drawing.Size(320, 21);
             this.AddNewPersonName_TextBox.TabIndex = 12;
             this.AddNewPersonName_TextBox.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
@@ -207,7 +209,7 @@ namespace Phonebook
             // 
             this.AddNewContact_TextBox.Location = new System.Drawing.Point(162, 197);
             this.AddNewContact_TextBox.Name = "AddNewContact_TextBox";
-            this.AddNewContact_TextBox.Size = new System.Drawing.Size(320, 20);
+            this.AddNewContact_TextBox.Size = new System.Drawing.Size(320, 21);
             this.AddNewContact_TextBox.TabIndex = 16;
             // 
             // PhoneType_ComboBox
@@ -219,14 +221,45 @@ namespace Phonebook
             "Home"});
             this.PhoneType_ComboBox.Location = new System.Drawing.Point(18, 197);
             this.PhoneType_ComboBox.Name = "PhoneType_ComboBox";
-            this.PhoneType_ComboBox.Size = new System.Drawing.Size(121, 21);
+            this.PhoneType_ComboBox.Size = new System.Drawing.Size(121, 22);
             this.PhoneType_ComboBox.TabIndex = 17;
+            // 
+            // DisplayHomeNumbers
+            // 
+            this.DisplayHomeNumbers.Location = new System.Drawing.Point(16, 340);
+            this.DisplayHomeNumbers.Name = "DisplayHomeNumbers";
+            this.DisplayHomeNumbers.Size = new System.Drawing.Size(182, 57);
+            this.DisplayHomeNumbers.TabIndex = 18;
+            this.DisplayHomeNumbers.Text = "Display Home Numbers";
+            this.DisplayHomeNumbers.UseVisualStyleBackColor = true;
+            this.DisplayHomeNumbers.Click += new System.EventHandler(this.DisplayHomeNumbers_Click);
+            // 
+            // ListView
+            // 
+            ListView.Location = new System.Drawing.Point(235, 340);
+            ListView.Name = "ListView";
+            ListView.Size = new System.Drawing.Size(588, 213);
+            ListView.TabIndex = 19;
+            ListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // ContactsMissingWorkNumbers
+            // 
+            this.ContactsMissingWorkNumbers.Location = new System.Drawing.Point(16, 403);
+            this.ContactsMissingWorkNumbers.Name = "ContactsMissingWorkNumbers";
+            this.ContactsMissingWorkNumbers.Size = new System.Drawing.Size(182, 57);
+            this.ContactsMissingWorkNumbers.TabIndex = 20;
+            this.ContactsMissingWorkNumbers.Text = "Contacts Missing Work Numbers";
+            this.ContactsMissingWorkNumbers.UseVisualStyleBackColor = true;
+            this.ContactsMissingWorkNumbers.Click += new System.EventHandler(this.ContactsMissingWorkNumbers_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(835, 565);
+            this.Controls.Add(this.ContactsMissingWorkNumbers);
+            this.Controls.Add(ListView);
+            this.Controls.Add(this.DisplayHomeNumbers);
             this.Controls.Add(this.PhoneType_ComboBox);
             this.Controls.Add(this.AddNewContact_TextBox);
             this.Controls.Add(this.AddNewContact_Button);
@@ -245,7 +278,7 @@ namespace Phonebook
             this.Controls.Add(this.AddNewContact_Label);
             this.Controls.Add(this.DeleteContact_Label);
             this.Controls.Add(this.AddNewPerson_Label);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Quartz MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -273,6 +306,9 @@ namespace Phonebook
         private System.Windows.Forms.Button AddNewContact_Button;
         private System.Windows.Forms.TextBox AddNewContact_TextBox;
         private System.Windows.Forms.ComboBox PhoneType_ComboBox;
+        private System.Windows.Forms.Button DisplayHomeNumbers;
+        private System.Windows.Forms.Button ContactsMissingWorkNumbers;
+        public static System.Windows.Forms.ListView ListView;
     }
 }
 
