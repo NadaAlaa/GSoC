@@ -31,6 +31,10 @@ namespace Phonebook
             string Name = AddNewPersonName_TextBox.Text;
             string Address = AddNewPersonAddress_TextBox.Text;
 
+            Program.RemoveLeadingSpaces(ref ID);
+            Program.RemoveLeadingSpaces(ref Name);
+            Program.RemoveLeadingSpaces(ref Address);
+
             if (ID.Length == 0)
             {
                 MessageBox.Show("Please Enter a Valid ID!");
@@ -57,6 +61,10 @@ namespace Phonebook
             string ID = AddNewContactID_TextBox.Text;
             string Number = AddNewContact_TextBox.Text;
             string ContactType = PhoneType_ComboBox.Text;
+
+            Program.RemoveLeadingSpaces(ref ID);
+            Program.RemoveLeadingSpaces(ref Number);
+            Program.RemoveLeadingSpaces(ref ContactType);
 
             if (ID.Length == 0)
             {

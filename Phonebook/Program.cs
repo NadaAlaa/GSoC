@@ -15,6 +15,13 @@ namespace Phonebook
         public static string Record;
         public static int MAX = 200;
 
+
+        public static void RemoveLeadingSpaces(ref string input)
+        {
+            while (input.Length > 0 && input[0] == ' ')
+                input = input.Remove(0, 1);
+        }
+
         public static byte[] ConvertToByteArray(string Record)
         {
             byte[] tmp = new byte[Record.Length];

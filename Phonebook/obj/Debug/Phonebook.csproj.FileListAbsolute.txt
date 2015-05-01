@@ -7,3 +7,11 @@ E:\Github\Phonebook\Phonebook\bin\Debug\Phonebook.exe
 E:\Github\Phonebook\Phonebook\bin\Debug\Phonebook.pdb
 E:\Github\Phonebook\Phonebook\obj\Debug\Phonebook.exe
 E:\Github\Phonebook\Phonebook\obj\Debug\Phonebook.pdb
+E:\Github\Phonebook\Phonebook\Phonebook\bin\Debug\Phonebook.exe.config
+E:\Github\Phonebook\Phonebook\Phonebook\bin\Debug\Phonebook.exe
+E:\Github\Phonebook\Phonebook\Phonebook\bin\Debug\Phonebook.pdb
+E:\Github\Phonebook\Phonebook\Phonebook\obj\Debug\Phonebook.csprojResolveAssemblyReference.cache
+E:\Github\Phonebook\Phonebook\Phonebook\obj\Debug\Phonebook.Properties.Resources.resources
+E:\Github\Phonebook\Phonebook\Phonebook\obj\Debug\Phonebook.csproj.GenerateResource.Cache
+E:\Github\Phonebook\Phonebook\Phonebook\obj\Debug\Phonebook.exe
+E:\Github\Phonebook\Phonebook\Phonebook\obj\Debug\Phonebook.pdb
