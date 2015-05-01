@@ -323,6 +323,10 @@ namespace Phonebook
                             _Name.SubItems.Add("No Home Number");
                             Form1.ListView.Items.Add(_Name);
                         }
+                        else if (Type == "Work")
+                        {
+                            person.DisplayData();
+                        }
                     }
                 }
                 RecordLength = FS.ReadByte();
