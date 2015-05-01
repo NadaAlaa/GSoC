@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Phonebook
 {
@@ -40,24 +41,29 @@ namespace Phonebook
             this.PhoneNumber += ContactType[0] + PhoneNumber;
         }
 
-        public bool DisplayHomeNumbers()
+        public bool DisplayHomeNumbers(string Name)
         {
+            ListViewItem _Name = new ListViewItem(Name);
             bool FoundHomeNumber = false;
+            string AllNumbers = "";
             for (int i = 0; i < this.PhoneNumber.Length; i++)
             {
                 if (this.PhoneNumber[i] == 'H')
                 {
-                    /*
-                     * Output: ID this.PhoneNumber.substr(i+1,10);
-                     *
-                     */
+                    if(AllNumbers.Length==0) AllNumbers=PhoneNumber.Substring(i+1,10);
+                    else AllNumbers += " / " +PhoneNumber.Substring(i + 1, 10);
                     FoundHomeNumber = true;
                 }
+            }
+            if (FoundHomeNumber) 
+            {
+                _Name.SubItems.Add(AllNumbers);
+                Form1.ListView.Items.Add(_Name);
             }
             return FoundHomeNumber;
         }
 
-        bool FoundWorkNumber()
+        public bool FoundWorkNumber()
         {
             for (int i = 0; i < this.PhoneNumber.Length; i++)
             {
@@ -66,7 +72,6 @@ namespace Phonebook
                     return true;
                 }
             }
-
             return false;
         }
     }
