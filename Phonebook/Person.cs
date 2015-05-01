@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 
 namespace Phonebook
 {
@@ -12,7 +12,7 @@ namespace Phonebook
         public int RecordLength;
         public string ID, Name, Address;
 
-        public Person() 
+        public Person()
         {
             this.RecordLength = 0;
         }
@@ -24,13 +24,13 @@ namespace Phonebook
             this.Address = address;
             RecordLength = this.ID.Length + this.Name.Length + this.Address.Length;
         }
-
-
+        
         public void DisplayData()
         {
-            /*
-             * Display kol elly enta 3ayzo hena
-             * */
+            ListViewItem data = new ListViewItem(Name);
+            data.SubItems.Add(Address);
+
+            Form1.ListView.Items.Add(data);
         }
     }
 
