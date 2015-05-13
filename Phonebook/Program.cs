@@ -206,7 +206,7 @@ namespace Phonebook
 
         public static void UpdateFile(FileStream FS, string[] FileRecords, int SIZE, int RRN)
         {
-            if (SIZE != 0) FS.Seek(0, SeekOrigin.Begin);
+            if (SIZE != -1) FS.Seek(0, SeekOrigin.Begin);
 
             StreamWriter SW = new StreamWriter(FS);
 
@@ -283,7 +283,7 @@ namespace Phonebook
                 contact = new Contact(ID, ContactType[0] + PhoneNumber);
                 Record = contact.ID + contact.PhoneNumber;
 
-                UpdateFile(FS, FileRecords, 0, -1);
+                UpdateFile(FS, FileRecords, -1, -1);
             }
             else
             {
@@ -371,9 +371,9 @@ namespace Phonebook
                             if (!contact.FoundWorkNumber())
                             {
                                 person.DisplayData();
-                                SR.Close();
-                                return true;
                             }
+                            SR.Close();
+                            return true;
                         }
                     }
                 }
