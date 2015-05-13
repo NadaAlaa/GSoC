@@ -236,6 +236,7 @@ namespace Phonebook
             // 
             // ListView
             // 
+            ListView.Font = new System.Drawing.Font("Quartz MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             ListView.Location = new System.Drawing.Point(235, 340);
             ListView.Name = "ListView";
             ListView.Size = new System.Drawing.Size(588, 213);
